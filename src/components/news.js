@@ -7,7 +7,7 @@ import useStyles from '../styles/newsStyles';
 import NewsItem from './newsItem';
 
 const News = (props) => {
-  const { news, title } = props;
+  const { news, title, amount } = props;
   const classes = useStyles();
   return (
     <section className={classes.news}>
@@ -28,11 +28,11 @@ const News = (props) => {
         <Grid item className={classes.viewMoreContainer}>
           <Button
             variant='outlined'
-            color='primary'
+            color='secondary'
             component={Link}
             to='/'
             className={classes.newsViewMoreBtn}>
-            View all 200 Technology News
+            View all {amount} {title} News
           </Button>
         </Grid>
       </Grid>

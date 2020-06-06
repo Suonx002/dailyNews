@@ -20,7 +20,7 @@ const NewsItem = (props) => {
       container
       direction='column'
       className={classes.new}
-      xs={6}
+      sm={6}
       md={4}
       lg={3}>
       <Grid item className={classes.newImageContainer}>
@@ -42,7 +42,10 @@ const NewsItem = (props) => {
           rel='noopener noreferrer'
           target='_blank'
           className={classes.titleLink}>
-          <Typography variant='h3' className={classes.newTitle}>
+          <Typography
+            variant='h3'
+            className={classes.newTitle}
+            color='secondary'>
             {title}
           </Typography>
         </a>
@@ -50,7 +53,7 @@ const NewsItem = (props) => {
 
       {/* sources */}
       <Grid item container>
-        <Grid item sm={6}>
+        <Grid item xs={6}>
           <a
             href={url}
             rel='noopener noreferrer'
@@ -61,12 +64,7 @@ const NewsItem = (props) => {
             </Typography>
           </a>
         </Grid>
-        <Grid
-          item
-          container
-          direction='column'
-          sm={6}
-          alignItems={matchesXS ? 'flex-start' : 'flex-end'}>
+        <Grid item container direction='column' xs={6} alignItems={'flex-end'}>
           <Grid item>
             <Typography variant='body1' className={classes.newAuthor}>
               By {author || 'null'}

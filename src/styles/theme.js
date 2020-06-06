@@ -21,6 +21,15 @@ export default createMuiTheme({
       fontFamily: 'Open Sans, sans-serif',
       fontSize: '2.5rem',
       lineHeight: 1.5,
+      [theme.breakpoints.down('md')]: {
+        fontSize: '2.3rem',
+      },
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '2.1rem',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '1.9rem',
+      },
     },
     h3: {
       fontFamily: 'Open Sans, sans-serif',

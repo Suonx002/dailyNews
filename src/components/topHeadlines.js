@@ -12,10 +12,14 @@ const TopHeadlines = () => {
   return (
     <div className={classes.headline}>
       <Container>
-        <Typography variant='h2' className={classes.headlineTitle}>
+        <Typography
+          variant='h2'
+          color='secondary'
+          className={classes.headlineTitle}>
           Most Popular News
         </Typography>
-        <News title='Technology' news={mockup} />
+        <News title='Technology' news={mockup} amount={100} />
+        <News title='Business' news={mockup} amount={120} />
       </Container>
     </div>
   );
