@@ -30,7 +30,11 @@ const Searchbar = () => {
               <Input
                 disableUnderline
                 name='searchInput'
-                placeholder='Search for technology, business, headlines, etc... '
+                placeholder={
+                  matchesXS
+                    ? 'Search for headlines, business, etc...'
+                    : 'Search for technology, business, headlines, etc...'
+                }
                 startAdornment={
                   <InputAdornment position='start'>
                     <SearchIcon />

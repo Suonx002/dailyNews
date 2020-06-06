@@ -87,6 +87,40 @@ export default [
   {
     source: {
       id: null,
+      name: 'BBC News',
+    },
+    author: 'BBC News',
+    title: "'It doesn't matter which skin colour you have' - BBC News",
+    description:
+      'People of all ages have been protesting, including children who say "you can\'t judge a book by its colour".',
+    url:
+      'https://www.bbc.com/news/av/world-us-canada-52943127/it-doesn-t-matter-which-skin-colour-you-have',
+    urlToImage:
+      'https://ichef.bbci.co.uk/news/1024/branded_news/142C/production/_112746150_p08g6y33.jpg',
+    publishedAt: '2020-06-06T07:41:44Z',
+    content: null,
+  },
+  {
+    source: {
+      id: null,
+      name: "Tom's Guide",
+    },
+    author: 'Roland Moore-Colyer',
+    title:
+      "PS5 patent teases the console’s design and clever cooling - Tom's Guide",
+    description:
+      'PS5 patent shows how the console will bring its gaming power to bear',
+    url:
+      'https://www.tomsguide.com/news/ps5-patent-teases-the-consoles-design-and-clever-cooling',
+    urlToImage:
+      'https://cdn.mos.cms.futurecdn.net/BUomsUzCCntFrQXW34B2gm-1200-80.png',
+    publishedAt: '2020-06-06T06:05:45Z',
+    content:
+      'Sony has yet to reveal the design of the PS5, but a patent spotted by LetsGoDigital showcases how the console will keep cool and hints at its design. \r\nThe patent shows a v-shaped cooling system that… [+2269 chars]',
+  },
+  {
+    source: {
+      id: null,
       name: 'allkpop',
     },
     author: 'beansss',
