@@ -27,13 +27,16 @@ export default makeStyles((theme) => ({
     color: theme.palette.primary.main,
     transition: 'all 0.3s ease',
     '&:hover': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.secondary.main,
+      boxShadow: '0 10px 18px rgba(0,0,0,0.15)',
     },
     '&:focus': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.secondary.main,
+      boxShadow: '0 10px 18px rgba(0,0,0,0.15)',
     },
     '&:active': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.secondary.main,
+      boxShadow: '0 10px 18px rgba(0,0,0,0.15)',
     },
     [theme.breakpoints.down('sm')]: {
       width: '100%',

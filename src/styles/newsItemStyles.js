@@ -5,6 +5,7 @@ export default makeStyles((theme) => ({
     // width: 300,
     padding: '1rem',
     marginBottom: '1rem',
+    overflow: 'hidden',
     transition: 'box-shadow 0.4s ease',
     '&:hover': {
       boxShadow: '0 10px 18px rgba(0,0,0,0.15)',

@@ -7,4 +7,9 @@ export default makeStyles((theme) => ({
   headlineTitle: {
     fontWeight: 700,
   },
+  headlineSpinnerContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 }));

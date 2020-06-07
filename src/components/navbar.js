@@ -16,7 +16,7 @@ const Navbar = () => {
         elevation={0}
         className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          <IconButton disableRipple className={classes.logoContainer}>
+          <IconButton disableRipple className={classes.logoContainer} href='/'>
             <img src={Logo} alt='DailyNews' className={classes.logo} />
           </IconButton>
         </Toolbar>

@@ -27,10 +27,10 @@ const News = (props) => {
         </Grid>
         <Grid item className={classes.viewMoreContainer}>
           <Button
-            variant='outlined'
+            variant='contained'
             color='secondary'
             component={Link}
-            to='/'
+            to={`/category/${title.toLowerCase()}`}
             className={classes.newsViewMoreBtn}>
             View all {amount} {title} News
           </Button>
