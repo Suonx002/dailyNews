@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 
 import {
   Container,
@@ -12,15 +12,28 @@ import { useTheme } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import useStyles from '../styles/searchbarStyles';
 
+import { SearchContext } from '../context/searchContext';
+
 const Searchbar = () => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
+  const [search, setSearch] = useState('');
+  const searchContext = useContext(SearchContext);
+  const { searchInput, results, searchResults } = searchContext;
+
+  const handleChange = (e) => setSearch(e.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    searchResults(search);
+  };
+
   return (
     <section className={classes.search}>
       <Container maxWidth='md'>
-        <form className={classes.searchForm}>
+        <form className={classes.searchForm} onSubmit={handleSubmit}>
           <Grid
             container
             justify='center'
@@ -28,6 +41,8 @@ const Searchbar = () => {
             direction={matchesXS ? 'column' : 'row'}>
             <Grid item sm={9} md={10} className={classes.searchItem}>
               <Input
+                value={search}
+                onChange={handleChange}
                 disableUnderline
                 name='searchInput'
                 placeholder={
