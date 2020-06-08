@@ -5,7 +5,6 @@ import { Container, Typography, CircularProgress } from '@material-ui/core';
 import useStyles from '../styles/topHeadlinesStyles';
 
 import News from '../components/news';
-import mockup from './newsMockup';
 
 const requests = [
   'technology',

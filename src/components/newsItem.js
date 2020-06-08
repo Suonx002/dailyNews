@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grid, Typography, useMediaQuery } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
+// import { useTheme } from '@material-ui/core/styles';
 import useStyles from '../styles/newsItemStyles';
 
 import page404 from '../assets/404.svg';
@@ -11,8 +11,8 @@ const NewsItem = (props) => {
     newItem: { source, author, title, url, urlToImage, publishedAt },
   } = props;
   const classes = useStyles();
-  const theme = useTheme();
-  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+  //const theme = useTheme();
+  //const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <Grid

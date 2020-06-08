@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
 import {
   Container,
@@ -19,7 +20,7 @@ const Footer = () => {
         <Grid container>
           {/* logo */}
           <Grid item sm={6} md={5}>
-            <IconButton className={classes.footerImageContainer}>
+            <IconButton className={classes.footerImageContainer} href='/'>
               <img src={logo} alt='logo' className={classes.footerImage} />
             </IconButton>
           </Grid>
@@ -33,18 +34,44 @@ const Footer = () => {
                 </Typography>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>Technology</Button>
+                <Button
+                  component={Link}
+                  to='/category/technology'
+                  className={classes.footerSocialBtn}>
+                  Technology
+                </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>Business</Button>
+                <Button
+                  component={Link}
+                  to='/category/business'
+                  className={classes.footerSocialBtn}>
+                  Business
+                </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>
+                <Button
+                  component={Link}
+                  to='/category/entertainment'
+                  className={classes.footerSocialBtn}>
                   Entertainment
                 </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>Health</Button>
+                <Button
+                  component={Link}
+                  to='/category/sports'
+                  className={classes.footerSocialBtn}>
+                  Sports
+                </Button>
+              </Grid>
+              <Grid item className={classes.footerSocialItem}>
+                <Button
+                  component={Link}
+                  to='/health'
+                  className={classes.footerSocialBtn}>
+                  Health
+                </Button>
               </Grid>
             </Grid>
             {/* City */}
@@ -55,21 +82,44 @@ const Footer = () => {
                 </Typography>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>Chicago</Button>
+                <Button
+                  component={Link}
+                  to='/chicago'
+                  className={classes.footerSocialBtn}>
+                  Chicago
+                </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>New York</Button>
+                <Button
+                  component={Link}
+                  to='/new-york'
+                  className={classes.footerSocialBtn}>
+                  New York
+                </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>
+                <Button
+                  component={Link}
+                  to='/san-francisco'
+                  className={classes.footerSocialBtn}>
                   San Francisco
                 </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>Washington</Button>
+                <Button
+                  component={Link}
+                  to='/washington'
+                  className={classes.footerSocialBtn}>
+                  Washington
+                </Button>
               </Grid>
               <Grid item className={classes.footerSocialItem}>
-                <Button className={classes.footerSocialBtn}>Seattle</Button>
+                <Button
+                  component={Link}
+                  to='/seattle'
+                  className={classes.footerSocialBtn}>
+                  Seattle
+                </Button>
               </Grid>
             </Grid>
             {/* company */}
@@ -103,4 +153,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);

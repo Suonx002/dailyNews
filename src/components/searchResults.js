@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { useContext } from 'react';
 
 import {
   Container,

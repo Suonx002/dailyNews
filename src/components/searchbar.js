@@ -32,6 +32,7 @@ const Searchbar = (props) => {
     e.preventDefault();
 
     searchResults(search);
+    setSearch('');
     props.history.push(`/${formatUrl(search.toLowerCase())}`);
   };
 

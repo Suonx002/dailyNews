@@ -10,13 +10,16 @@ const Homepage = (props) => {
   const searchContext = useContext(SearchContext);
   const { results, searchResults } = searchContext;
 
+  const formatUrl = (url) =>
+    url.includes('-') ? url.replace(/[-]/g, ' ') : url;
+
   useEffect(() => {
     if (props.match.params.searchQuery) {
-      searchResults(props.match.params.searchQuery.toLowerCase());
+      searchResults(formatUrl(props.match.params.searchQuery.toLowerCase()));
       props.history.push(`/${props.match.params.searchQuery.toLowerCase()}`);
     }
     //eslint-disable-next-line
-  }, []);
+  }, [props.match.params.searchQuery]);
   return (
     <main>
       <Searchbar />
