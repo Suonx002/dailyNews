@@ -134,6 +134,7 @@ const Footer = () => {
                 <IconButton
                   className={classes.footerSocialBtn}
                   rel='noopener noreferrer'
+                  target='_blank'
                   href='https://github.com/Suonx002/dailyNews'>
                   <GitHubIcon className={classes.githubIcon} />
                 </IconButton>

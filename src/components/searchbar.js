@@ -51,7 +51,7 @@ const Searchbar = (props) => {
                 onChange={handleChange}
                 disableUnderline
                 name='searchInput'
-                placeholder='Search for technology, headlines, etc...'
+                placeholder='Search for healines, anything, etc...'
                 startAdornment={
                   <InputAdornment position='start'>
                     <SearchIcon />
