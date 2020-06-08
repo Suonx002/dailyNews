@@ -65,7 +65,7 @@ const NewsItem = (props) => {
           </a>
         </Grid>
         <Grid item container direction='column' xs={6} alignItems={'flex-end'}>
-          <Grid item>
+          <Grid item className={classes.authContainer}>
             <Typography variant='body1' className={classes.newAuthor}>
               By {author || 'null'}
             </Typography>

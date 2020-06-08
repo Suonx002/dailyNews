@@ -59,18 +59,21 @@ export default makeStyles((theme) => ({
     },
   },
   newAuthor: {
+    textAlign: 'right',
     fontWeight: 300,
     [theme.breakpoints.down('xs')]: {
       marginBottom: '0.5rem',
       paddingRight: '0.5rem',
     },
   },
+  authContainer: {
+    width: '100%',
+  },
   dateContainer: {
-    // [theme.breakpoints.down('xs')]: {
-    //   width: '100%',
-    // },
+    width: '100%',
   },
   newDate: {
+    textAlign: 'right',
     fontWeight: 300,
     [theme.breakpoints.down('xs')]: {
       paddingRight: '0.5rem',

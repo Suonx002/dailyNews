@@ -9,7 +9,7 @@ export const SearchContext = createContext();
 
 export const SearchProvider = (props) => {
   const initialState = {
-    results: [],
+    results: null,
   };
 
   const [state, dispatch] = useReducer(searchReducer, initialState);

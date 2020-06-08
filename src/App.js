@@ -16,6 +16,7 @@ const App = () => {
           <Switch>
             <Route exact path='/' component={Homepage} />
             <Route exact path='/category/:category_id' component={Category} />
+            <Route exact path='/:searchQuery' component={Homepage} />
           </Switch>
           <Footer />
         </BrowserRouter>

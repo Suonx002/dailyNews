@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import {
   Container,
@@ -14,20 +15,24 @@ import useStyles from '../styles/searchbarStyles';
 
 import { SearchContext } from '../context/searchContext';
 
-const Searchbar = () => {
+const Searchbar = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   const [search, setSearch] = useState('');
   const searchContext = useContext(SearchContext);
-  const { searchInput, results, searchResults } = searchContext;
+  const { searchResults } = searchContext;
 
+  const formatUrl = (url) => {
+    return url.includes(' ') ? url.replace(/[ ]/g, '-') : url;
+  };
   const handleChange = (e) => setSearch(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
 
     searchResults(search);
+    props.history.push(`/${formatUrl(search.toLowerCase())}`);
   };
 
   return (
@@ -45,11 +50,7 @@ const Searchbar = () => {
                 onChange={handleChange}
                 disableUnderline
                 name='searchInput'
-                placeholder={
-                  matchesXS
-                    ? 'Search for headlines, business, etc...'
-                    : 'Search for technology, business, headlines, etc...'
-                }
+                placeholder='Search for technology, headlines, etc...'
                 startAdornment={
                   <InputAdornment position='start'>
                     <SearchIcon />
@@ -74,4 +75,4 @@ const Searchbar = () => {
   );
 };
 
-export default Searchbar;
+export default withRouter(Searchbar);
