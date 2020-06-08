@@ -131,7 +131,10 @@ const Footer = () => {
               </Grid>
 
               <Grid item className={classes.footerSocialItem}>
-                <IconButton className={classes.footerSocialBtn}>
+                <IconButton
+                  className={classes.footerSocialBtn}
+                  rel='noopener noreferrer'
+                  href='https://github.com/Suonx002/dailyNews'>
                   <GitHubIcon className={classes.githubIcon} />
                 </IconButton>
               </Grid>
