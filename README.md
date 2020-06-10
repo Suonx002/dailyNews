@@ -11,4 +11,4 @@
 
 
 ### Screenshot
-[Screenshot](./src/assets/landingPage.png)
+![Screenshot](./src/assets/landingPage.png)
