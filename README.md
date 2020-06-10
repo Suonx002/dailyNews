@@ -1,10 +1,10 @@
 ### DailyNews
 
-- This application utilize News API to display latest articles.
+- This application utilize News API to display top headlines articles.
 
 ### Live Demo
 
-- Unfortunately the free API for News is available for local use only.
+- Unfortunately the free tier for this API is available for localhost use only.
 
 ### Video Demo
 [Video Demo](https://www.youtube.com/watch?v=pVBFykvvu1w)
