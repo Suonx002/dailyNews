@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, {useState, useContext} from 'react';
+import {withRouter} from 'react-router-dom';
 
 import {
   Container,
@@ -9,11 +9,11 @@ import {
   Button,
   useMediaQuery,
 } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import {useTheme} from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import useStyles from '../styles/searchbarStyles';
 
-import { SearchContext } from '../context/searchContext';
+import {SearchContext} from '../context/searchContext';
 
 const Searchbar = (props) => {
   const classes = useStyles();
@@ -22,7 +22,7 @@ const Searchbar = (props) => {
 
   const [search, setSearch] = useState('');
   const searchContext = useContext(SearchContext);
-  const { searchResults } = searchContext;
+  const {searchResults} = searchContext;
 
   const formatUrl = (url) => {
     return url.includes(' ') ? url.replace(/[ ]/g, '-') : url;
@@ -51,7 +51,7 @@ const Searchbar = (props) => {
                 onChange={handleChange}
                 disableUnderline
                 name='searchInput'
-                placeholder='Search for healines, anything, etc...'
+                placeholder='Search for headlines, anything, etc...'
                 startAdornment={
                   <InputAdornment position='start'>
                     <SearchIcon />
