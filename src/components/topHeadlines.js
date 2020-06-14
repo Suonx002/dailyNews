@@ -38,7 +38,7 @@ const TopHeadlines = () => {
     for (let req of requests) {
       promises.push(
         axios.get(
-          'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines',
+          'https://yacdn.org/proxy/https://newsapi.org/v2/top-headlines',
           {
             params: {
               country: 'us',
