@@ -18,17 +18,15 @@ const Category = (props) => {
   const [infiniteScroll, setInfiniteScroll] = useState([]);
 
   const fetchCategory = async () => {
-    const res = await axios.get(
-      'https://yacdn.org/proxy/https://newsapi.org/v2/top-headlines',
-      {
-        params: {
-          country: 'us',
-          category: props.match.params.category_id.toLowerCase(),
-          pageSize: 100,
-          apiKey: process.env.REACT_APP_API_KEY,
-        },
-      }
-    );
+    const cors = 'https://cors-anywhere.herokuapp.com/';
+    const res = await axios.get(`${cors}https://newsapi.org/v2/top-headlines`, {
+      params: {
+        country: 'us',
+        category: props.match.params.category_id.toLowerCase(),
+        pageSize: 100,
+        apiKey: process.env.REACT_APP_API_KEY,
+      },
+    });
 
     setCategory(res.data.articles);
     setInfiniteScroll(res.data.articles.slice(0, 12));

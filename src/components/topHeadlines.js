@@ -33,12 +33,14 @@ const TopHeadlines = () => {
   });
 
   const fetchCategory = async () => {
+    const cors = 'https://cors-anywhere.herokuapp.com/';
+
     const promises = [];
     //create a list of promises url
     for (let req of requests) {
       promises.push(
         axios.get(
-          'https://yacdn.org/proxy/https://newsapi.org/v2/top-headlines',
+          `${cors}https://yacdn.org/proxy/https://newsapi.org/v2/top-headlines`,
           {
             params: {
               country: 'us',
