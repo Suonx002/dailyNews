@@ -31,13 +31,10 @@ const TopHeadlines = () => {
     sportsAmount: null,
     businessAmount: null,
   });
-  console.log(process.env.NODE_ENV);
-  console.log(process.env.REACT_APP_API_KEY);
-  console.log(process.env.SOMETHING);
 
   const fetchCategory = async () => {
-    const cors = 'https://cors-anywhere.herokuapp.com/';
-    // const cors = 'https://yacdn.org/proxy/';
+    // const cors = 'https://cors-anywhere.herokuapp.com/';
+    const cors = 'https://yacdn.org/proxy/';
 
     const promises = [];
     //create a list of promises url
@@ -48,6 +45,7 @@ const TopHeadlines = () => {
             country: 'us',
             category: req,
             pageSize: 12,
+            // apiKey: process.env.REACT_APP_API_KEY,
             apiKey: process.env.REACT_APP_API_KEY,
           },
         })
