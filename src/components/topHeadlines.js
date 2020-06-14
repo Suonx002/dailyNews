@@ -31,25 +31,26 @@ const TopHeadlines = () => {
     sportsAmount: null,
     businessAmount: null,
   });
+  console.log(process.env.NODE_ENV);
+  console.log(process.env.REACT_APP_API_KEY);
+  console.log(process.env.SOMETHING);
 
   const fetchCategory = async () => {
     const cors = 'https://cors-anywhere.herokuapp.com/';
+    // const cors = 'https://yacdn.org/proxy/';
 
     const promises = [];
     //create a list of promises url
     for (let req of requests) {
       promises.push(
-        axios.get(
-          `${cors}https://yacdn.org/proxy/https://newsapi.org/v2/top-headlines`,
-          {
-            params: {
-              country: 'us',
-              category: req,
-              pageSize: 12,
-              apiKey: process.env.REACT_APP_API_KEY,
-            },
-          }
-        )
+        axios.get(`${cors}https://newsapi.org/v2/top-headlines`, {
+          params: {
+            country: 'us',
+            category: req,
+            pageSize: 12,
+            apiKey: process.env.REACT_APP_API_KEY,
+          },
+        })
       );
     }
     const res = await axios.all(promises);

@@ -18,6 +18,7 @@ export const SearchProvider = (props) => {
   const searchResults = async (searchInput) => {
     try {
       const cors = 'https://cors-anywhere.herokuapp.com/';
+      // const cors = 'https://yacdn.org/proxy/';
 
       const res = await axios.get(`${cors}https://newsapi.org/v2/everything`, {
         params: {

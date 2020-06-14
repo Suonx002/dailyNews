@@ -19,6 +19,12 @@ const Category = (props) => {
 
   const fetchCategory = async () => {
     const cors = 'https://cors-anywhere.herokuapp.com/';
+
+    // const cors = 'https://yacdn.org/proxy/';
+
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.REACT_APP_API_KEY);
+
     const res = await axios.get(`${cors}https://newsapi.org/v2/top-headlines`, {
       params: {
         country: 'us',
