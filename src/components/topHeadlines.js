@@ -37,14 +37,17 @@ const TopHeadlines = () => {
     //create a list of promises url
     for (let req of requests) {
       promises.push(
-        axios.get('https://newsapi.org/v2/top-headlines', {
-          params: {
-            country: 'us',
-            category: req,
-            pageSize: 12,
-            apiKey: process.env.REACT_APP_API_KEY,
-          },
-        })
+        axios.get(
+          'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines',
+          {
+            params: {
+              country: 'us',
+              category: req,
+              pageSize: 12,
+              apiKey: process.env.REACT_APP_API_KEY,
+            },
+          }
+        )
       );
     }
     const res = await axios.all(promises);

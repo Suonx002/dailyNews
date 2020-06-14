@@ -17,14 +17,17 @@ export const SearchProvider = (props) => {
   // actions
   const searchResults = async (searchInput) => {
     try {
-      const res = await axios.get('https://newsapi.org/v2/everything', {
-        params: {
-          q: searchInput,
-          language: 'en',
-          pageSize: 100,
-          apiKey: process.env.REACT_APP_API_KEY,
-        },
-      });
+      const res = await axios.get(
+        'https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything',
+        {
+          params: {
+            q: searchInput,
+            language: 'en',
+            pageSize: 100,
+            apiKey: process.env.REACT_APP_API_KEY,
+          },
+        }
+      );
       dispatch({
         type: SEARCH_RESULTS,
         payload: res.data.articles,
